@@ -51,6 +51,12 @@
         }
     });
 
+    onBeforeUnmount(() => {
+        if (stream) {
+            removeTrack(stream);
+        }
+    });
+    
     const toggleRecording = () => {
         if (isRecording.value) {
             stopRecording();

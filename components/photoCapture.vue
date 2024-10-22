@@ -47,6 +47,12 @@
         }
     });
 
+    onBeforeUnmount(() => {
+        if (stream) {
+            removeTrack(stream);
+        }
+    });
+
     const capturePhoto = () => {
         if(images.value.length >= 3) {
             return;
