@@ -1,11 +1,11 @@
 <template>
-    <form ref="form" @submit="handleFormSubmit" class="flex flex-col items-center gap-2 p-3 md:p-10 w-full max-md:h-full">
+    <form ref="form" @submit="handleFormSubmit" class="flex flex-col items-center gap-10 p-3 md:p-10 w-full max-md:h-full">
         <div class="flex flex-col items-center gap-2 p-3 md:p-10 w-full max-md:h-full">
             <h1>কোনো প্রমানাদি থাকলে তা সংযুক্ত করুন (সর্বোচ্চ ৩টি, ৫০ মেগাবাইটের মধ্যে)</h1>
 
             <UploadImage v-if="mode === 'upload'" name="uploads"/>
             <PhotoCapture v-if="mode === 'photo'" name="capturedImages"/>
-            <VideoRecord v-if="mode === 'video'" name="recordedVideos"/>  
+            <VideoRecord v-if="mode === 'video'" name="recordedVideos"/>    
 
             <div class="flex items-center gap-3">
                 <button @click="() => {
