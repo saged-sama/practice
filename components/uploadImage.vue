@@ -29,7 +29,7 @@
     const handleFileUpload = (event: Event) => {
         const target = event.target as HTMLInputElement;
         if (target.files) {
-            for (let i = 0; i < target.files.length; i++) {
+            for (let i = 0; i < 3; i++) {
                 const file = target.files[i];
                 const reader = new FileReader();
                 reader.onload = () => {
