@@ -73,6 +73,9 @@
     };
 
     const startRecording = () => {
+        if(videos.value.length >= 3) {
+            return;
+        }
         if (!stream) return;
 
         mediaRecorder = new MediaRecorder(stream);
