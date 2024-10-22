@@ -1,5 +1,5 @@
 <template>
-    <label class="w-1/2">
+    <label class="w-full md:w-1/2">
         <input type="file" :name="name" multiple hidden accept="image/*" @change="handleFileUpload">
         <div class="flex items-center justify-center w-full h-40 border rounded-md cursor-pointer">
             <h1>Select files to upload</h1>

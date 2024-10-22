@@ -1,5 +1,5 @@
 <template>
-    <div class="relative flex flex-col gap-3 items-center w-1/2 h-auto">
+    <div class="relative flex flex-col gap-3 items-center md:w-1/2 h-auto">
         <video ref="videoElement" autoplay class="rounded-md bg-black w-full"></video>
         <div class="absolute bottom-2 w-full flex items-center justify-center gap-3">
             <button class="text-white" @click="capturePhoto">

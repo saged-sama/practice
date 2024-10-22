@@ -1,6 +1,6 @@
 <template>
-    <form ref="form" @submit="handleFormSubmit" class="flex flex-col items-center gap-2 p-10">
-        <div class="flex flex-col items-center gap-2 p-10 w-full">
+    <form ref="form" @submit="handleFormSubmit" class="flex flex-col items-center gap-2 p-3 md:p-10 w-full max-md:h-full">
+        <div class="flex flex-col items-center gap-2 p-3 md:p-10 w-full max-md:h-full">
             <h1>কোনো প্রমানাদি থাকলে তা সংযুক্ত করুন (সর্বোচ্চ ৩টি, ৫০ মেগাবাইটের মধ্যে)</h1>
 
             <UploadImage v-if="mode === 'upload'" name="uploads"/>
