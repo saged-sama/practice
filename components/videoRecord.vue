@@ -46,7 +46,8 @@
                     facingMode: {
                         ideal: 'environment'
                     }
-                } 
+                },
+                audio: true
             });
             if (videoElement.value) {
                 videoElement.value.srcObject = stream;
