@@ -5,7 +5,7 @@
 
             <UploadImage v-if="mode === 'upload'" name="uploads"/>
             <PhotoCapture v-if="mode === 'photo'" name="capturedImages"/>
-            <VideoRecord v-if="mode === 'video'" name="recordedVideos"/>    
+            <VideoRecord v-if="mode === 'video'" name="recordedVideos"/>
 
             <div class="flex items-center gap-3">
                 <button @click="() => {
@@ -28,6 +28,8 @@
                 }"/> </button>
             </div>
         </div>
+
+        <Ppcc />
         
         <button type="submit" class="p-3 px-5 bg-green-300 rounded-md">Submit</button>
     </form>
