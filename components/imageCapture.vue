@@ -1,6 +1,6 @@
 <template>
     <label class="w-full md:w-1/2">
-        <input type="file" :name="name" capture="environment" hidden accept="image/*" @change="handleFileUpload">
+        <input type="file" :name="name" multiple capture="environment" hidden accept="image/*" @change="handleFileUpload">
         <div class="flex items-center justify-center w-full h-40 border rounded-md cursor-pointer">
             <h1 class="flex flex-col items-center gap-2"><span>Take a Photo</span> <LucideCamera /> </h1>
         </div>
