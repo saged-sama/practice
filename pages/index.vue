@@ -4,7 +4,7 @@
             <h1>কোনো প্রমানাদি থাকলে তা সংযুক্ত করুন (সর্বোচ্চ ৩টি, ৫০ মেগাবাইটের মধ্যে)</h1>
 
             <UploadImage v-if="mode === 'upload'" name="uploads"/>
-            <PhotoCapture v-if="mode === 'photo'" name="capturedImages"/>
+            <ImageCapture v-if="mode === 'photo'" name="capturedImages"/>
             <VideoRecord v-if="mode === 'video'" name="recordedVideos"/>
 
             <div class="flex items-center gap-3">
@@ -28,9 +28,6 @@
                 }"/> </button>
             </div>
         </div>
-
-        <Ppcc />
-        
         <button type="submit" class="p-3 px-5 bg-green-300 rounded-md">Submit</button>
     </form>
 </template>
