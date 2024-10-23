@@ -2,7 +2,7 @@
     <label class="w-full md:w-1/2">
         <input type="file" :name="name" capture="environment" hidden accept="video/*" @change="handleFileUpload">
         <div class="flex items-center justify-center w-full h-40 border rounded-md cursor-pointer">
-            <h1 class="flex flex-col items-center gap-2"><span>Record the Incident</span> <LucideVide /> </h1>
+            <h1 class="flex flex-col items-center gap-2"><span>Record a Video</span> <LucideVideo /> </h1>
         </div>
     </label>
 
