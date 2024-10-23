@@ -1,14 +1,14 @@
 <template>
     <label class="w-full md:w-1/2">
-        <input type="file" :name="name" capture="environment" hidden accept="image/*" @change="handleFileUpload">
+        <input type="file" :name="name" capture="environment" hidden accept="video/*" @change="handleFileUpload">
         <div class="flex items-center justify-center w-full h-40 border rounded-md cursor-pointer">
-            <h1 class="flex flex-col items-center gap-2"><span>Take a Photo</span> <LucideCamera /> </h1>
+            <h1 class="flex flex-col items-center gap-2"><span>Record the Incident</span> <LucideVide /> </h1>
         </div>
     </label>
 
     <div class="grid grid-cols-3 gap-2">
-        <div v-for="(image, index) in images" :key="index" class="relative rounded-md">
-            <img :src="image.src" class="w-full h-40 object-cover rounded-md" />
+        <div v-for="(video, index) in videos" :key="index" class="relative rounded-md">
+            <video :src="video.src" class="w-full h-40 object-cover rounded-md"></video>
             <button @click="removeImage(index)" class="absolute top-2 right-2 bg-red-500 text-white rounded-full p-1">
                 <LucideX class="w-5 h-5" />
             </button>
@@ -18,19 +18,19 @@
 
 <script setup lang="ts">
 
-    interface Image {
+    interface Video {
         src: string;
         blob: Blob;
     }   
 
-    const images = ref<Image[]>([]);
+    const videos = ref<Video[]>([]);
 
     const props = defineProps({
         name: String
     });
 
     const handleFileUpload = (event: any) => {
-        if(images.value.length >= 3) {
+        if(videos.value.length >= 3) {
             return;
         }
         const target = event.target as HTMLInputElement;
@@ -39,7 +39,7 @@
                 const file = target.files[i];
                 const reader = new FileReader();
                 reader.onload = () => {
-                    images.value.push({
+                    videos.value.push({
                         src: reader.result as string,
                         blob: file
                     });
@@ -50,7 +50,7 @@
     }
 
     const removeImage = (index: number) => {
-        images.value.splice(index, 1);
+        videos.value.splice(index, 1);
     }
 
 </script>
