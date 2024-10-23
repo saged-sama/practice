@@ -5,7 +5,7 @@
 
             <UploadImage v-if="mode === 'upload'" name="uploads"/>
             <ImageCapture v-if="mode === 'photo'" name="capturedImages"/>
-            <VideoRecord v-if="mode === 'video'" name="recordedVideos"/>
+            <VideoRecording v-if="mode === 'video'" name="recordedVideos"/>
 
             <div class="flex items-center gap-3">
                 <button @click="() => {
